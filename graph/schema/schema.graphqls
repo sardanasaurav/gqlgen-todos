@@ -1,0 +1,81 @@
+################################ struct for gql
+type Book{
+  id: Int!
+  title: String!
+  author: [Author]!
+}
+
+type Author{
+  id: Int!
+  name: String!
+  book: String!
+}
+
+#
+#type Question{
+#  id: String!
+#  question_text: String!
+#  pub_date: String!
+#  choices: [Choice]
+#}
+#
+#type Choice{
+#  id: String!
+#  question: Question!
+#  question_id: String!
+#  choice_text: String!
+#}
+
+################################ struct for gql end here
+
+
+
+
+###############################input for mutation
+
+#input BookInput {
+#  question_text: String!
+#  pub_date: String!
+#}
+#
+#input AuthorInput {
+#  question_id: String!
+#  choice_text: String!
+#}
+
+
+#
+#input QuestionInput {
+#  question_text: String!
+#  pub_date: String!
+#}
+#
+#input ChoiceInput {
+#  question_id: String!
+#  choice_text: String!
+#}
+################################### input for mutation end here
+
+
+
+
+################################### registering for mutation
+#type Mutation {
+#  createQuestion(input: QuestionInput!): Question!
+#  createChoice(input: ChoiceInput): Choice!
+#}
+################################### registering for mutation end here
+
+
+
+
+################################### registering for query
+type Query {
+  books: [Book]!
+  book(id:ID): Book!
+  author(id:ID): Author!
+  authors: [Author]!
+#  questions: [Question]!
+#  choices: [Choice]!
+}
+################################### registering for query end here
