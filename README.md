@@ -1,7 +1,7 @@
 # gqlgen-todos
 
 ####steps to get started
-###### go run ./scripts/run.sh (starts the graphql server)
+###### ./scripts/run.sh (starts the graphql server)
 ###### go run Test/main.go (starts the backend api's which gql api's will call)
 ###### go to url localhost:7777 (for graphql playground)
 ###### run your query
